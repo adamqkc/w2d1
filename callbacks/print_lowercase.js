@@ -1,4 +1,15 @@
 var https = require('https');
-var step5 = require('../step5');
+var getHTML = require('../step5');
 
-console.log(step5);
+var requestOptions = {
+  host: 'sytantris.github.io',
+  path: '/http-examples/step6/lowercase.html'
+};
+
+function printUpperCase(html) {
+
+  /* Write your code here! */
+  console.log(html.toLowerCase());
+}
+
+getHTML(requestOptions, printUpperCase);
